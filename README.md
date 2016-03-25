@@ -1,22 +1,17 @@
 # OWASP Passfault: Do Passwords Better!
 
-This image contains the passfault password analysis JSON service for enforcing a new kind of password policy.  This image is intended to be built on to add you own custom wordlists.
+This image lets you extend the OWASP Passfault docker image with your own custom wordlists
 
-## Getting OWASP Passfault in Docker
-This fetches the passfault docker image
-`docker pull ccaamm/passfault`
+## Custom wordlists
+Put custom wordlists in the `wordlists` directory.  We recommend the excellent CeWL tool for crawling a domain and generating a domain specific wordlist. https://digi.ninja/projects/cewl.php
 
-This creates and starts a passfault docker instance
+Then modify the words.properties file in this directory to include a reference to the new wordlist:
 
-`docker run -d ccaamm/passfault`
+## build the docker image
+`docker build -t custom-passfault .
+`docker run -d custom-passfault`
 
 You can verify it is up and running at https://{container-ip}:8443
 Alternatively you can expose the SSL port as follows:
 
 `docker run -d -p 8443:8443 ccaamm/passfault`
-
-(technically you could also expose the clear-text port 8080, but these are passwords!)
-
-## Make Passfault Your Own
-
-You want to add your own wordlists? Or maybe turn on or off the built-in wordlists?  Here is a docker template to extend this image: TODO
