@@ -11,7 +11,7 @@ Then modify the `words.properties` file in this directory to include a reference
 Running on a docker machine, you can build your own image by changing the directory to this project.  Then run the following:
 ```
 docker build -t custom-passfault .
-docker run -d custom-passfault`
+docker run -d custom-passfault
 ```
 
 You can verify it is up and running at http://{container-ip}:8080
