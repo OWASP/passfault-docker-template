@@ -7,7 +7,7 @@ Put custom wordlists in the `wordlists` directory.  We recommend the excellent C
 
 Then modify the `words.properties` file in this directory to include a reference to the new wordlist.  
 
-## build the docker image
+## Build the docker image
 Running on a docker machine, you can build your own image by changing the directory to this project.  Then run the following:
 ```
 docker build -t custom-passfault .
