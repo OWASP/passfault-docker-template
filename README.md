@@ -14,7 +14,7 @@ docker build -t custom-passfault .
 docker run custom-passfault
 ```
 
-You can verify it is up and running at http://{container-ip}:8080, or https://{container-ip}:8443
+You can verify it is up and running at `http://{container-ip}:8080`, or `https://{container-ip}:8443`
 
 Alternatively you can expose the ports as follows:
 
