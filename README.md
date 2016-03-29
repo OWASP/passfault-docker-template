@@ -18,7 +18,7 @@ You can verify it is up and running at `http://{container-ip}:8080`, or `https:/
 
 Alternatively you can expose the ports as follows:
 
-`docker run -p 8080:8080 -p 8443:8443 ccaamm/passfault`
+`docker run -p 8080:8080 -p 8443:8443 custom-passfault`
 
 
 ## TLS configuration
