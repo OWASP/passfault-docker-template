@@ -1,6 +1,6 @@
 # OWASP Passfault: Do Passwords Better!
 
-This image lets you extend the OWASP Passfault docker image with your own custom wordlists, and an auto-generated, sign-signed certificate for TLS encrypted traffic.
+This image lets you extend the OWASP Passfault docker image with your own custom wordlists, and with an auto-generated self-signed certificate for TLS encrypted traffic.
 
 ## Custom wordlists
 Put custom wordlists in the `wordlists` directory.  We recommend the excellent CeWL tool for crawling a domain and generating a domain specific wordlist. https://digi.ninja/projects/cewl.php
@@ -22,7 +22,7 @@ Alternatively you can expose the ports as follows:
 
 
 ## TLS configuration
-This template will generate a self-signed certificate for TLS encrypted traffic.  To use your own certificates, import the certificate into a keystore with an alias of 'jetty' and install it as ${JETTY_BASE}/etc/keystore. The __storepass__ will have to be 'storepwd' and the __keypass__ must be 'keypwd'.  (Otherwise the jetty configuration will have to updated to change the default passwords)
+This template will generate a self-signed certificate for TLS encrypted traffic.  To use your own certificates, import the certificate into a keystore with an alias of 'jetty' and install it as ${JETTY_BASE}/etc/keystore. The __storepass__ will have to be 'storepwd' and the __keypass__ must be 'keypwd'.  (Otherwise the jetty configuration will have to be updated to change the default passwords)
 
 ## More Details
 The [parent image](https://github.com/c-a-m/passfault-docker) defines the environment variable *PASSFAULT_WORDLISTS* that points to the directory where wordslists are stored.  Also in this directory is the configuration for the wordlists: _wordlists.properties_
