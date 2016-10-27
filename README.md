@@ -25,7 +25,7 @@ Alternatively you can expose the ports as follows:
 This template will generate a self-signed certificate for TLS encrypted traffic.  To use your own certificates, import the certificate into a keystore with an alias of 'jetty' and install it as ${JETTY_BASE}/etc/keystore. The __storepass__ will have to be 'storepwd' and the __keypass__ must be 'keypwd'.  (Otherwise the jetty configuration will have to be updated to change the default passwords)
 
 ## More Details
-The [parent image](https://github.com/c-a-m/passfault-docker) defines the environment variable *PASSFAULT_WORDLISTS* that points to the directory where wordslists are stored.  Also in this directory is the configuration for the wordlists: _wordlists.properties_
+The [parent image](https://github.com/owasp/passfault-docker) defines the environment variable *PASSFAULT_WORDLISTS* that points to the directory where wordslists are stored.  Also in this directory is the configuration for the wordlists: _wordlists.properties_
 This template overwrites the existing template with the one defined in this project.  The syntax of the wordlists should be self-explainatory.
 
 
