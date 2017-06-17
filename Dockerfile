@@ -1,4 +1,4 @@
-FROM ccaamm/passfault:v0.81
+FROM ccaamm/passfault:v0.8.3
 MAINTAINER Happy Passfaulter <happyPassfaulter@example.com>
 
 # Copy the words.properties and wordlists into passfault
